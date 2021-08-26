@@ -6,6 +6,7 @@ const content = {
       { text: 'About Me', to: 'aboutMe' },
       { text: 'Contact', to: 'myContact' },
     ],
+
   },
   header: {
     img: '/assets/headshot.png',
@@ -13,9 +14,9 @@ const content = {
     typical: [
       'full-stack web developer. 🖥',
       2000,
-      'lifelong tech nerd. 🕶',
-      2000,
       'UI/UX designer. 🎆',
+      2000,
+      'lifelong tech nerd. 🕶',
       2000,
       'sports junkie. 🏈',
       2000
