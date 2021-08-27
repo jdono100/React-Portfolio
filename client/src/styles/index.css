@@ -11,8 +11,8 @@ html {
 }
 .bm-burger-button {
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   right: 36px;
   top: 0;
 }
@@ -25,6 +25,7 @@ html {
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
   background: #92400E;
+  color: #3a312c;
 }
 
 .bm-overlay {

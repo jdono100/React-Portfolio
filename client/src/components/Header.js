@@ -12,7 +12,7 @@ export default function Header() {
   }, []);
   return (
     <div className='min-h-screen flex items-center justify-center' style={{
-      background: '#292320'
+      background: '#332625'
     }}>
       <div className='w-10/12 flex flex-col md:flex-row-reverse items-center justify-between'>
         <div className='w-full md:w-2/5' style={{ opacity: '60%' }}>

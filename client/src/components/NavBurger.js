@@ -9,22 +9,21 @@ const toggleMenu = ({ isOpen }) => {
     : menuWrap.setAttribute('aria-hidden', true);
   document.querySelector('#logobtn').addEventListener('click', () => {
     isOpen 
-      ? document.querySelector('#logobtn').addEventListener('click', () => {
-          menuWrap.setState({ isOpen: false });
-        }) 
+      ? menuWrap.setAttribute('aria-hidden', false) 
       : menuWrap.setAttribute('aria-hidden', true);
   });
 };
 
 const NavBurger = () => {
+
   return(
     <Menu right customCrossIcon={ false } onStateChange={ toggleMenu }>
       <ul>
         {content.navbar.links.map((link, i) => {
           return(
-            <Link to={link.to} smooth={true}>
+            <Link key={i} to={link.to} smooth={true}>
               <li key={i}>
-                <button className="py-4 inline-block hover:text-yellow-800">{link.text}</button>
+                <button className="py-4 inline-block cursor-pointer hover:text-yellow-800 ">{link.text}</button>
               </li>
             </Link>
           )
