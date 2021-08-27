@@ -12,12 +12,11 @@ const proj = content.projects;
 export default function Project() {
   const [tabIndex, setTabIndex] = useState(0);
   const flickityOptions = {
-    initialIndex: 0,
-    contain: false,
-    prevNextButtons: true,
-    pageDots: true,
+    initialIndex: 1,
     autoPlay: 3000,
-    wrapAround: true
+    wrapAround: true,
+    prevNextButtons: false,
+    contain: true
   };
   const trackerImageList = proj.priceTracker.images.map(image => {
     return <img src={image} key={image} alt= {''}/>
@@ -38,63 +37,63 @@ export default function Project() {
         </TabList>
         <TabPanel>
           <Flickity  
-            className={'carousel'}
+            className={'carousel overflow-hidden'}
             elementType={'div'}
             options={flickityOptions}
             disableImagesLoaded={false}
             >
             {trackerImageList}
           </Flickity>
-          <p>{proj.priceTracker.description}</p>
-          <p>Role: {proj.priceTracker.role}</p>
-          <p>Tech Used: {proj.priceTracker.technologies}</p>
-          <p className='space-x-2'>
-            <a href={proj.priceTracker.github}>
+          <p className="text-sm mt-2">{proj.priceTracker.description}</p>
+          <p className="text-sm mt-2">Role: {proj.priceTracker.role}</p>
+          <p className="text-sm mt-2">Tech Used: {proj.priceTracker.technologies}</p>
+          <p className='space-x-2 mt-2'>
+            <a className='hover:text-gray-500' target='_blank' href={proj.priceTracker.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a href={proj.priceTracker.deployed}>
+            <a  className='hover:text-gray-500' target='_blank' href={proj.priceTracker.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
         </TabPanel>
         <TabPanel>
           <Flickity  
-            className={'carousel'}
+            className={'carousel overflow-hidden'}
             elementType={'div'}
             options={flickityOptions}
             disableImagesLoaded={false}
             >
             {calendaeImageList}
           </Flickity>
-          <p>{proj.calendae.description}</p>
-          <p>Role: {proj.calendae.role}</p>
-          <p>Tech Used: {proj.calendae.technologies}</p>
-          <p className='space-x-2'>
-            <a href={proj.calendae.github}>
+          <p className="text-sm mt-2">{proj.calendae.description}</p>
+          <p className="text-sm mt-2">Role: {proj.calendae.role}</p>
+          <p className="text-sm mt-2">Tech Used: {proj.calendae.technologies}</p>
+          <p className='space-x-2 mt-2'>
+            <a className='hover:text-gray-500' target='_blank' href={proj.calendae.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a href={proj.calendae.deployed}>
+            <a className='hover:text-gray-500' target='_blank' href={proj.calendae.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
         </TabPanel>
         <TabPanel>
           <Flickity  
-            className={'carousel'}
+            className={'carousel overflow-hidden'}
             elementType={'div'}
             options={flickityOptions}
             disableImagesLoaded={false}
             >
             {blogImageList}
           </Flickity>
-          <p>{proj.techBlog.description}</p>
-          <p>Role: {proj.techBlog.role}</p>
-          <p>Tech Used: {proj.techBlog.technologies}</p>
-          <p className='space-x-2'>
-            <a href={proj.techBlog.github}>
+          <p className="text-sm mt-2">{proj.techBlog.description}</p>
+          <p className="text-sm mt-2">Role: {proj.techBlog.role}</p>
+          <p className="text-sm mt-2">Tech Used: {proj.techBlog.technologies}</p>
+          <p className='space-x-2 mt-2'>
+            <a className='hover:text-gray-500' target='_blank' href={proj.techBlog.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a href={proj.techBlog.deployed}>
+            <a className='hover:text-gray-500' target='_blank' href={proj.techBlog.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
