@@ -29,7 +29,7 @@ export default function Project() {
   });
   return (
     <div className="text-center w-full md:w-3/5">
-      <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
+      <Tabs className='mx-auto text-yellow-300' selectedTabClassName='text-yellow-500 rounded-t-md bg-gray-500' selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
         <TabList>
           <Tab>{proj.priceTracker.title}</Tab>
           <Tab>{proj.calendae.title}</Tab>
@@ -44,14 +44,14 @@ export default function Project() {
             >
             {trackerImageList}
           </Flickity>
-          <p className="text-sm mt-2">{proj.priceTracker.description}</p>
-          <p className="text-sm mt-2">Role: {proj.priceTracker.role}</p>
-          <p className="text-sm mt-2">Tech Used: {proj.priceTracker.technologies}</p>
+          <p className="text-yellow-500 text-sm mt-2">{proj.priceTracker.description}</p>
+          <p className="text-yellow-600 text-sm mt-2">Role: {proj.priceTracker.role}</p>
+          <p className="text-yellow-700 text-sm mt-2">Tech Used: {proj.priceTracker.technologies}</p>
           <p className='space-x-2 mt-2'>
-            <a className='hover:text-gray-500' target='_blank' href={proj.priceTracker.github}>
+            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.priceTracker.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a  className='hover:text-gray-500' target='_blank' href={proj.priceTracker.deployed}>
+            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.priceTracker.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
@@ -69,10 +69,10 @@ export default function Project() {
           <p className="text-sm mt-2">Role: {proj.calendae.role}</p>
           <p className="text-sm mt-2">Tech Used: {proj.calendae.technologies}</p>
           <p className='space-x-2 mt-2'>
-            <a className='hover:text-gray-500' target='_blank' href={proj.calendae.github}>
+            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.calendae.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a className='hover:text-gray-500' target='_blank' href={proj.calendae.deployed}>
+            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.calendae.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
@@ -90,10 +90,10 @@ export default function Project() {
           <p className="text-sm mt-2">Role: {proj.techBlog.role}</p>
           <p className="text-sm mt-2">Tech Used: {proj.techBlog.technologies}</p>
           <p className='space-x-2 mt-2'>
-            <a className='hover:text-gray-500' target='_blank' href={proj.techBlog.github}>
+            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.techBlog.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a className='hover:text-gray-500' target='_blank' href={proj.techBlog.deployed}>
+            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.techBlog.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>

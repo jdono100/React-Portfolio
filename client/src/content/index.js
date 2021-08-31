@@ -55,7 +55,14 @@ const content = {
     }
   },
   aboutMe: {
-
+    image: '/assets/cats.png',
+    paragraphs: [
+      "To reiterate: My name is Jared Donovan and I'm a junior level full-stack web developer that currently resides in the Chicagoland area.",
+      "I have a passion for client-side design & functionality but I have solid experience working with back-end databases and APIs.",
+      "I recently graduated from Northwestern University's Full-Stack Web Development Boot Camp and the class equipped me with a firm understanding of the MERN stack.",
+      "There are new technologies and languages I am learning every day and I continue to develop projects using an agile workflow.",
+      "Some more fun stuff: I love sports, working out, going to the beach, playing games with friends,"
+    ]
   },
   contact: {
 
