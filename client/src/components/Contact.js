@@ -9,7 +9,7 @@ import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import content from '../content';
 
 export default function Contact() {
-  const [status, setStatus] = useState('Submit');
+  const [status, setStatus] = useState('Send');
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus('Sending...');
@@ -19,6 +19,7 @@ export default function Contact() {
       email: email.value,
       message: message.value,
     };
+    console.log(details)
     let response = await fetch('http://localhost:3001/contact', {
       method: 'POST',
       headers: {
@@ -26,7 +27,7 @@ export default function Contact() {
       },
       body: JSON.stringify(details),
     });
-    setStatus('Submit');
+    setStatus('Send');
     let result = await response.json();
     alert(result.status);
   }
@@ -34,8 +35,8 @@ export default function Contact() {
     <div id='myContact' className='min-h-screen flex items-center justify-center' style={{
       background: '#3a312c'
     }}>
-      <div className='w-4/5 flex flex-col md:flex-row items-center justify-between'>
-        <div className='mb-10 text-center p-10 rounded-xl bg-black'>
+      <div className='w-4/5 space-x-2 flex flex-col md:flex-row items-center justify-between'>
+        <div className='mb-10 text-center p-4 md:p-10 rounded-xl bg-black'>
           <h1 className='text-4xl md:text-5xl font-bold text-yellow-500'>Links</h1>
           <div className='mt-8 space-x-4'>
             <a className='text-gray-500 transition duration-200 hover:text-gray-300' target='_blank' rel='noreferrer' href={content.contact.links.github}><FontAwesomeIcon icon={faGithubSquare} size='4x'/></a>
@@ -49,8 +50,8 @@ export default function Contact() {
             </a>
           </div>
         </div>
-        <div className='p-10 rounded-xl text-center space-y-4 bg-black'>
-          <h1 className='text-4xl md:text-5xl font-bold text-yellow-500'>Contact Me</h1>
+        <div className='p-4 md:p-10 rounded-xl text-center space-y-4 bg-black'>
+          <h1 className='text-4xl mb-5 md:text-5xl font-bold text-yellow-500'>Contact Me</h1>
           <form className='space-y-4' onSubmit={handleSubmit}>
             <div>
               <label htmlFor='name' className='pr-8 text-white'>Name:</label>
@@ -58,13 +59,13 @@ export default function Contact() {
             </div>
             <div>
               <label htmlFor='email' className='pr-9 text-white'>Email:</label>
-              <input className='bg-gray-300 p-3' type='text' id='email' required/>
+              <input className='bg-gray-300 p-3 rounded-lg' type='text' id='email' required/>
             </div>
             <div>
               <label htmlFor='message' className='text-white'>Message:</label>
-              <textarea className='bg-gray-300 p-3 w-full h-40' type='text' id='message' required/>
+              <textarea className='bg-gray-300 p-3 w-full h-40 rounded-lg' type='text' id='message' required/>
             </div>
-            <button type='submit'>{status}</button>
+            <button className='bg-gradient-to-r text-gray-900 hover:text-gray-600 transition duration-200 from-yellow-400 via-orange-500 to-red-500 px-10 py-3 text-xl mt-5 rounded-lg' type='submit'>{status}</button>
           </form>
         </div>
       </div>
