@@ -48,10 +48,10 @@ export default function Project() {
           <p className="text-yellow-600 text-sm mt-2">Role: {proj.priceTracker.role}</p>
           <p className="text-yellow-700 text-sm mt-2">Tech Used: {proj.priceTracker.technologies}</p>
           <p className='space-x-2 mt-2'>
-            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.priceTracker.github}>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.priceTracker.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.priceTracker.deployed}>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.priceTracker.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
@@ -69,10 +69,10 @@ export default function Project() {
           <p className="text-sm mt-2">Role: {proj.calendae.role}</p>
           <p className="text-sm mt-2">Tech Used: {proj.calendae.technologies}</p>
           <p className='space-x-2 mt-2'>
-            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.calendae.github}>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.calendae.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.calendae.deployed}>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.calendae.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
@@ -90,10 +90,10 @@ export default function Project() {
           <p className="text-sm mt-2">Role: {proj.techBlog.role}</p>
           <p className="text-sm mt-2">Tech Used: {proj.techBlog.technologies}</p>
           <p className='space-x-2 mt-2'>
-            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.techBlog.github}>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.techBlog.github}>
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
-            <a rel="noreferrer" className='text-gray-600 hover:text-gray-400' target='_blank' href={proj.techBlog.deployed}>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.techBlog.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>
