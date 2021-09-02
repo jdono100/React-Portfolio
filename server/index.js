@@ -5,16 +5,20 @@ const router = express.Router();
 const path = require('path');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 
+const uri = process.env.MONGODB_URI || 'mongodb://localhost/portfolio';
+
 // Middleware
 
 const app = express();
+mongoose.connect(uri, { useNewUrlParser: true });
 
 app.use(cors());
-app.use('/', router);
+// app.use('/', router);/
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 const contactEmail = nodemailer.createTransport({
@@ -35,28 +39,32 @@ contactEmail.verify(error => {
 
 // Routes
 
-router.post('/contact', (req, res) => {
-  console.log(req.body);
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-  const mail = {
-    from: name,
-    to: process.env.GMAIL,
-    subject: 'Portfolio Contact Submission',
-    html: `
-      <p>Name: ${name}</p>
-      <p>Email: ${email}</p>
-      <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, error => {
-    if (error) {
-      console.log(error);
-    } else {
-      res.json({ message: 'Email sent!' });
-    }
-  })
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
 });
+
+// router.post('/contact', (req, res) => {
+//   console.log(req.body);
+//   const name = req.body.name;
+//   const email = req.body.email;
+//   const message = req.body.message;
+//   const mail = {
+//     from: name,
+//     to: process.env.GMAIL,
+//     subject: 'Portfolio Contact Submission',
+//     html: `
+//       <p>Name: ${name}</p>
+//       <p>Email: ${email}</p>
+//       <p>Message: ${message}</p>`,
+//   };
+//   contactEmail.sendMail(mail, error => {
+//     if (error) {
+//       console.log(error);
+//     } else {
+//       res.json({ message: 'Email sent!' });
+//     }
+//   })
+// });
 
 // Server start
 
