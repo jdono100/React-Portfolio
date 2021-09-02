@@ -15,27 +15,27 @@ const uri = process.env.MONGODB_URI || 'mongodb://localhost/portfolio';
 // Middleware
 
 const app = express();
-mongoose.connect(uri, { useNewUrlParser: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(cors());
 // app.use('/', router);/
 app.use(express.static(path.resolve(__dirname, '../../client/build')));
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL,
-    pass: process.env.GMAIL_PW,
-  },
-});
+// const contactEmail = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: process.env.GMAIL,
+//     pass: process.env.GMAIL_PW,
+//   },
+// });
 
-contactEmail.verify(error => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Ready to send...');
-  };
-});
+// contactEmail.verify(error => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Ready to send...');
+//   };
+// });
 
 // Routes
 
