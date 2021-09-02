@@ -19,7 +19,7 @@ mongoose.connect(uri, { useNewUrlParser: true });
 
 app.use(cors());
 // app.use('/', router);/
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, '../../client/build')));
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
@@ -40,7 +40,7 @@ contactEmail.verify(error => {
 // Routes
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 // router.post('/contact', (req, res) => {
