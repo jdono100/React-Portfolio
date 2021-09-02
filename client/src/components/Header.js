@@ -37,7 +37,7 @@ export default function Header() {
               /> 
           </h2>
           <ScrollLink to='aboutMe' smooth={true}>
-            <button className='bg-gradient-to-r text-gray-900 from-yellow-400 via-orange-500 to-red-500 px-10 py-3 text-xl mt-5 rounded-lg'>{content.header.btnText}</button>
+            <button className='bg-gradient-to-r text-gray-900 hover:text-gray-600 transition duration-200 from-yellow-400 via-orange-500 to-red-500 px-10 py-3 text-xl mt-5 rounded-lg'>{content.header.btnText}</button>
           </ScrollLink>
         </div>
       </div>

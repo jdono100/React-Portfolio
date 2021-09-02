@@ -15,14 +15,14 @@ export default function Navbar() {
       background: '#291F1E'
     }}>
       <div className="flex items-center justify-between mx-auto w-11/12 py-3 text-yellow-400">
-        <button id='logobtn' onClick={() => scroll.scrollToTop()} className="text-xl font-bold">
+        <button id='logobtn' onClick={() => scroll.scrollToTop()} className="transition duration-200 hover:text-yellow-800 text-xl font-semibold">
           {content.navbar.logo}
         </button>
         <div className='hidden md:flex'>
           {content.navbar.links.map((link, i) => {
             return(
               <Link key={i} to={link.to} smooth={true}>
-                <li className="mr-4 inline-block p-4 text-sm hover:text-yellow-800" key={i}>{link.text}</li>
+                <li className="mr-4 inline-block p-4 text-sm transition duration-200 hover:text-yellow-800" key={i}>{link.text}</li>
               </Link>
             )
           })}
