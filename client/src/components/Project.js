@@ -19,19 +19,23 @@ export default function Project() {
     contain: true
   };
   const trackerImageList = proj.priceTracker.images.map(image => {
-    return <img src={image} key={image} alt= {''}/>
+    return <img src={image} key={image} alt={''}/>
+  });
+  const quizzardImageList = proj.quizzard.images.map(image => {
+    return <img src={image} key={image} alt={''}/>
   });
   const calendaeImageList = proj.calendae.images.map(image => {
-    return <img src={image} key={image} alt= {''}/>
+    return <img src={image} key={image} alt={''}/>
   });
   const blogImageList = proj.techBlog.images.map(image => {
-    return <img src={image} key={image} alt= {''}/>
+    return <img src={image} key={image} alt={''}/>
   });
   return (
     <div className="text-center w-full md:w-3/5">
       <Tabs className='mx-auto text-yellow-300' selectedTabClassName='text-yellow-500 rounded-t-md bg-gray-500' selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
         <TabList>
           <Tab>{proj.priceTracker.title}</Tab>
+          <Tab>{proj.quizzard.title}</Tab>
           <Tab>{proj.calendae.title}</Tab>
           <Tab>{proj.techBlog.title}</Tab>
         </TabList>
@@ -52,6 +56,27 @@ export default function Project() {
               <FontAwesomeIcon icon={faGithub} size='2x'/>
             </a>
             <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.priceTracker.deployed}>
+              <FontAwesomeIcon icon={faLink} size='2x'/>
+            </a>
+          </p>
+        </TabPanel>
+        <TabPanel>
+          <Flickity  
+            className={'carousel overflow-hidden'}
+            elementType={'div'}
+            options={flickityOptions}
+            disableImagesLoaded={false}
+            >
+            {quizzardImageList}
+          </Flickity>
+          <p className="text-yellow-500 text-sm mt-2">{proj.quizzard.description}</p>
+          <p className="text-yellow-600 text-sm mt-2">Role: {proj.quizzard.role}</p>
+          <p className="text-yellow-700 text-sm mt-2">Tech Used: {proj.quizzard.technologies}</p>
+          <p className='space-x-2 mt-2'>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.quizzard.github}>
+              <FontAwesomeIcon icon={faGithub} size='2x'/>
+            </a>
+            <a rel="noreferrer" className='text-gray-600 transition duration-200 hover:text-gray-400' target='_blank' href={proj.quizzard.deployed}>
               <FontAwesomeIcon icon={faLink} size='2x'/>
             </a>
           </p>

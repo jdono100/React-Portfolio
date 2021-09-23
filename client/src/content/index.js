@@ -35,6 +35,15 @@ const content = {
       github: 'https://github.com/Project01-TCG-Price-Tracker/TCG_Price_Tracker',
       deployed: 'https://project01-tcg-price-tracker.github.io/TCG_Price_Tracker/'
     },
+    quizzard: {
+      images: ['/assets/quizzard-SC1.png', '/assets/quizzard-SC2.png', '/assets/quizzard-SC3.png', '/assets/quizzard-SC4.png'],
+      title: 'Quizzard',
+      description: 'A MERN stack, progressive web app that allows users to create and take quizzes of their own design. Quizzes are sorted by popularity, and recent scores are displayed on the quiz page. Users can also search for quizzes by name, author, or tags.',
+      role: 'Front-end lead',
+      technologies: 'MongoDB, Express.js, React.js, Node.js, TailwindCSS, PopperJS',
+      github: 'https://github.com/Quizzard-Dev/Quizzard',
+      deployed: 'https://quizzardweb.herokuapp.com/'
+    },
     calendae: {
       images: ['/assets/calendae-SC2.png', '/assets/calendae-SC1.png', '/assets/calendae-SC3.png', '/assets/calendae-SC4.png'],
       title: 'Calendae',
