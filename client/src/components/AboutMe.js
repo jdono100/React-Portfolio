@@ -9,7 +9,9 @@ export default function AboutMe() {
       background: '#362E2A'
     }}>
       <div className='rounded-xl p-4 h-4/5 text-xl text-yellow-600 w-10/12 flex flex-col md:flex-row-reverse items-center justify-between' style= {{ background: '#28221f' }}>
-        <div className='w-3/5 md:w-2/5' style={{ opacity: '60%' }}>
+        <div className='w-3/5 md:w-2/5' style={{ 
+              opacity: '60%' 
+            }}>
           <LazyLoadImage
             src={content.aboutMe.image}
             effect='blur'
