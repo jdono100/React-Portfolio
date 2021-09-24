@@ -79,7 +79,7 @@ const content = {
       github: 'https://github.com/jdono100',
       twitter: 'https://twitter.com/jaredonovan',
     },
-    resume: '/Jared_donovan_resume.pdf'
+    resume: '/Jared_Donovan_resume.pdf'
   },
 }
 
